@@ -4,43 +4,42 @@ import type { Metadata } from "next"
 
 const projects = [
   {
-    title: "Placeholder Project X",
-    description: "A tool to simplify complex tasks in XYZ domain.",
+    title: "create-t3-app",
+    description:
+      "A CLI tool to bootstrap full-stack TypeScript applications with the T3 stack. Simplifies the setup process and includes best practices for modern web development.",
     role: "Creator and Maintainer",
-    period: "Jan 20XX - Present",
-    achievements: [
-      "Grew project to 500+ GitHub stars (placeholder)",
-      "Implemented a scalable architecture (placeholder)",
-      "Received positive feedback from users (placeholder)",
+    period: "Jun 2022 - Present",
+    technologies: ["TypeScript", "Next.js", "tRPC", "Prisma", "Tailwind CSS", "NextAuth.js"],
+    images: [
+      "/cat-4.webp",
+      "/calc-2.webp",
+      "/milk-5.webp",
     ],
-    technologies: ["TypeScript", "Next.js", "React", "Tailwind CSS", "Node.js"],
-    href: "https://github.com/yourusername/project-x",
+    href: "https://github.com/t3-oss/create-t3-app",
   },
   {
-    title: "Placeholder Project Y",
-    description: "An innovative solution for data visualization.",
-    role: "Developer",
-    period: "Mar 20XX - Aug 20XX",
-    achievements: [
-      "Developed interactive dashboards (placeholder)",
-      "Improved data loading performance (placeholder)",
-      "Contributed to open-source community (placeholder)",
-    ],
-    technologies: ["Python", "D3.js", "Flask", "PostgreSQL"],
-    href: "https://github.com/yourusername/project-y",
-  },
-  {
-    title: "Placeholder Project Z",
-    description: "A CLI tool for automating developer workflows.",
+    title: "mini-git",
+    description:
+      "A simplified implementation of Git built from scratch to understand version control internals. Implements core Git commands and demonstrates system programming concepts.",
     role: "Creator",
-    period: "Feb 20XX",
-    achievements: [
-      "Built a robust command-line interface (placeholder)",
-      "Streamlined deployment processes (placeholder)",
-      "Published to npm (placeholder)",
+    period: "Jul 2024",
+    technologies: ["Rust", "File Systems", "Cryptography", "CLI Design"],
+    images: ["/placeholder.svg?height=192&width=400", "/placeholder.svg?height=192&width=400"],
+    href: "https://github.com/yourusername/mini-git",
+  },
+  {
+    title: "ai-code-reviewer",
+    description:
+      "An intelligent code review assistant that integrates with GitHub to provide automated, context-aware feedback on pull requests using advanced language models.",
+    role: "Lead Developer",
+    period: "Mar 2024 - Aug 2024",
+    technologies: ["Python", "OpenAI API", "GitHub Actions", "Docker", "FastAPI"],
+    images: [
+      "/placeholder.svg?height=192&width=400",
+      "/placeholder.svg?height=192&width=400",
+      "/placeholder.svg?height=192&width=400",
     ],
-    technologies: ["Rust", "CLI-framework-name", "Shell Scripting"],
-    href: "https://github.com/yourusername/project-z",
+    href: "https://github.com/yourusername/ai-code-reviewer",
   },
 ]
 
