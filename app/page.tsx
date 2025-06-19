@@ -1,95 +1,46 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { Header } from "@/components/header"
+import { type Item, SectionList } from "@/components/section-list"
+import { LinksSection } from "@/components/links-section"
 
-export default function Home() {
+const workItems: Item[] = [
+  {
+    title: "Placeholder Company A",
+    role: "Software Engineer",
+    period: "Jan 20XX - Present",
+    description: "Building innovative software solutions for global clients.",
+    href: "https://www.placeholder-company-a.com",
+  },
+  {
+    title: "Placeholder Company B",
+    role: "Junior Developer",
+    period: "Jul 20XX - Dec 20XX",
+    description: "Assisted in front-end development of web applications.",
+    href: "https://www.placeholder-company-b.com",
+  },
+]
+
+const projectItems = [
+  {
+    title: "My Awesome Project One",
+    role: "Creator",
+    description: "A cool project that does amazing things.",
+    href: "https://github.com/yourusername/my-awesome-project-one",
+  },
+  {
+    title: "Another Fun Project",
+    role: "Contributor",
+    description: "Collaborated on a project to solve a challenging problem.",
+    href: "https://github.com/yourusername/another-fun-project",
+  },
+]
+
+export default function HomePage() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    <>
+      <Header />
+      <SectionList title="work" items={workItems} />
+      <SectionList title="projects" items={projectItems} viewAllHref="/projects" viewAllText="all projects" />
+      <LinksSection />
+    </>
+  )
 }
