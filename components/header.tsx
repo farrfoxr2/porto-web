@@ -4,26 +4,24 @@ import { MapPin, Building2 } from "lucide-react"
 export function Header() {
   return (
     <header className="mb-16 space-y-4">
-      <h1 className="text-4xl font-bold mb-4 animate-fade-in text-white">
+      <h1 className="text-4xl font-bold mb-4 animate-fade-in text-primary">
         <span className="inline-block">
-          <ScrambleText text="your full name" />
+          <ScrambleText text="Farrell Suryadi" />
         </span>
       </h1>
-      <div className="flex flex-col gap-2 text-gray-400">
+      <div className="flex flex-col gap-2 text-secondary">
         <div className="flex items-center gap-2">
           <MapPin className="w-4 h-4" />
-          your city, your country
+          Tangerang, Indonesia
         </div>
         <div className="flex items-center gap-2">
           <Building2 className="w-4 h-4" />
-          your current role @ your company/university
+          Computer Science student @ BINUS University
         </div>
       </div>
-      <p className="leading-relaxed animate-fade-in-up">
-        I&apos;m a [your age] y/o [your study/profession] student/professional. I love building things and solving
-        problems. I enjoy [your interests, e.g., language design, theoretical computer science] and I live on the
-        terminal. If I&apos;m not coding, I&apos;m probably [your hobbies, e.g., doing cardistry, watching movies or
-        obsessing over mechanical keyboards].
+      <p className="leading-relaxed animate-fade-in-up text-secondary">
+        Hi! I&apos;m someone who loves to figure out how things work. I explore topics down to the details and edge cases. I use this trait to explore data and the challenges it brings, but I&apos;m also open 
+        to other fields of topic across tech. I enjoy teaching, sharing what I learn, making complex concepts easy to understand for other people.
       </p>
     </header>
   )

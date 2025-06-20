@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Geist_Mono } from "next/font/google"
 import "./globals.css"
 import { Navbar } from "@/components/navbar"
+import { ThemeProvider } from "@/components/theme-provider"
 
 const geistMono = Geist_Mono({
   subsets: ["latin"],
@@ -39,18 +40,16 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={`${geistMono.variable} antialiased min-h-screen font-mono`}>
-        <div className="max-w-4xl mx-auto px-4 py-8">
-          <Navbar />
-          {children}
-        </div>
+        <ThemeProvider>
+          <div className="max-w-4xl mx-auto px-4 py-8">
+            <Navbar />
+            {children}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   )

@@ -12,8 +12,8 @@ const projects = [
     technologies: ["TypeScript", "Next.js", "tRPC", "Prisma", "Tailwind CSS", "NextAuth.js"],
     images: [
       "/cat-4.webp",
-      "/calc-2.webp",
       "/milk-5.webp",
+      "/skarpsill-3.webp",
     ],
     href: "https://github.com/t3-oss/create-t3-app",
   },
@@ -46,12 +46,12 @@ const projects = [
 export default function ProjectsPage() {
   return (
     <main className="animate-fade-in-up">
-      <h1 className="text-4xl font-bold mb-8 text-white">
+      <h1 className="text-4xl font-bold mb-8 text-primary">
         <span className="text-accent mr-2">*</span>
         <ScrambleText text="projects" />
       </h1>
 
-      <p className="text-gray-400 mb-12 leading-relaxed">
+      <p className="text-secondary mb-12 leading-relaxed">
         Here are some of the projects I&apos;ve worked on. I enjoy building tools that simplify tasks and exploring new
         technologies.
       </p>

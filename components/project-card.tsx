@@ -14,22 +14,22 @@ interface ProjectCardProps {
 
 export function ProjectCard({ title, description, role, period, technologies, images, href }: ProjectCardProps) {
   return (
-    <div className="border border-gray-800 rounded-lg p-6 hover:border-accent/50 transition-colors duration-200 group">
+    <div className="border border-primary rounded-lg p-6 hover:border-accent-hover transition-colors duration-200 group">
       <Link href={href} className="block no-underline">
         <div className="flex items-start justify-between mb-4">
           <div>
-            <h3 className="text-xl font-bold text-white group-hover:text-accent transition-colors duration-200 mb-1">
+            <h3 className="text-xl font-bold text-primary group-hover:text-accent transition-colors duration-200 mb-1">
               {title}
             </h3>
-            <div className="text-sm text-gray-400 mb-4">
+            <div className="text-sm text-secondary mb-4">
               {role} ({period})
             </div>
           </div>
-          <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-accent transition-all duration-200 group-hover:translate-x-1 group-hover:-translate-y-1 flex-shrink-0" />
+          <ArrowUpRight className="w-5 h-5 text-secondary group-hover:text-accent transition-all duration-200 group-hover:translate-x-1 group-hover:-translate-y-1 flex-shrink-0" />
         </div>
 
         {/* Image Gallery */}
-        <div className="mb-4 h-48 relative overflow-hidden rounded-lg bg-gray-800">
+        <div className="mb-4 h-48 relative overflow-hidden rounded-lg bg-secondary">
           {/* Main Image - Always Visible */}
           <div className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-0">
             <div className="relative w-full h-full">
@@ -115,19 +115,19 @@ export function ProjectCard({ title, description, role, period, technologies, im
 
           {/* Image Count Indicator */}
           {images.length > 1 && (
-            <div className="absolute top-2 right-2 bg-black/50 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="absolute top-2 right-2 bg-overlay text-primary text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               {images.length} images
             </div>
           )}
         </div>
 
-        <p className="text-gray-400 mb-4 leading-relaxed">{description}</p>
+        <p className="text-secondary mb-4 leading-relaxed">{description}</p>
 
         <div>
-          <h4 className="text-sm font-semibold text-white mb-2">technologies</h4>
+          <h4 className="text-sm font-semibold text-primary mb-2">technologies</h4>
           <div className="flex flex-wrap gap-2">
             {technologies.map((tech, index) => (
-              <span key={index} className="px-2 py-1 text-xs bg-gray-800 text-gray-300 rounded border border-gray-700">
+              <span key={index} className="px-2 py-1 text-xs bg-tertiary text-secondary rounded border border-tag">
                 {tech}
               </span>
             ))}

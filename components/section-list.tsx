@@ -20,7 +20,7 @@ export function SectionList({ title, items, viewAllHref, viewAllText }: SectionL
   return (
     <section className="mb-16 animate-fade-in-up">
       <div className="flex items-center mb-6">
-        <h2 className="text-2xl font-bold flex items-center text-white">
+        <h2 className="text-2xl font-bold flex items-center text-primary">
           <span className="text-accent mr-2">*</span> {title}
         </h2>
       </div>
@@ -30,17 +30,17 @@ export function SectionList({ title, items, viewAllHref, viewAllText }: SectionL
             <Link href={item.href} className="block no-underline">
               <div className="flex flex-col space-y-1">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-semibold text-white group-hover:text-accent transition-colors duration-200">
+                  <h3 className="font-semibold text-primary group-hover:text-accent transition-colors duration-200">
                     {item.title}
                   </h3>
-                  <ArrowUpRight className="w-4 h-4 text-gray-400 group-hover:text-accent transition-all duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  <ArrowUpRight className="w-4 h-4 text-secondary group-hover:text-accent transition-all duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </div>
                 {item.role && item.period && (
-                  <div className="text-sm text-gray-400">
+                  <div className="text-sm text-secondary">
                     {item.role} ({item.period})
                   </div>
                 )}
-                <p className="text-gray-400 text-sm leading-relaxed">{item.description}</p>
+                <p className="text-secondary text-sm leading-relaxed">{item.description}</p>
               </div>
             </Link>
           </div>
