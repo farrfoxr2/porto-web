@@ -1,11 +1,10 @@
 import Link from "next/link"
 
 const links = [
-  { title: "email", href: "mailto:your.email@example.com" },
-  { title: "x.com", href: "https://x.com/yourhandle" },
-  { title: "github", href: "https://github.com/yourusername" },
-  { title: "linkedin", href: "https://www.linkedin.com/in/yourlinkedinprofile" },
-  { title: "book a call", href: "https://cal.com/yourcalcomlink" },
+  { title: "email", href: "mailto:farrell.suryadi@binus.ac.id" },
+  { title: "linkedin", href: "https://linkedin.com/in/farrell-suryadi" },
+  { title: "github", href: "https://github.com/farrfoxr" },
+  { title: "x.com", href: "https://x.com/farrbonk" },
 ]
 
 export function LinksSection() {
@@ -17,6 +16,7 @@ export function LinksSection() {
       <div className="flex flex-wrap gap-4 text-sm">
         {links.map((link, index) => (
           <Link
+            target="_blank"
             key={index}
             href={link.href}
             className="text-secondary hover:text-accent transition-colors duration-200 no-underline"

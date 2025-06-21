@@ -27,7 +27,7 @@ export function SectionList({ title, items, viewAllHref, viewAllText }: SectionL
       <div className="space-y-6">
         {items.map((item, index) => (
           <div key={index} className="group">
-            <Link href={item.href} className="block no-underline">
+            <Link target="_blank" href={item.href} className="block no-underline">
               <div className="flex flex-col space-y-1">
                 <div className="flex items-center justify-between">
                   <h3 className="font-semibold text-primary group-hover:text-accent transition-colors duration-200">

@@ -20,8 +20,8 @@ export function Header() {
         </div>
       </div>
       <p className="leading-relaxed animate-fade-in-up text-secondary">
-        Hi! I&apos;m someone who loves to figure out how things work. I explore topics down to the details and edge cases. I use this trait to explore data and the challenges it brings, but I&apos;m also open 
-        to other fields of topic across tech. I enjoy teaching, sharing what I learn, making complex concepts easy to understand for other people.
+        Hi! I&apos;m someone who loves to figure out how things work. I explore topics down to the details and edge cases. I use this trait to explore data science and the challenges it brings, but I&apos;m also open 
+        to other fields of topic across tech [softwares, cloud, database, IoT]. I enjoy teaching, sharing what I learn, making complex concepts easy to understand for other people.
       </p>
     </header>
   )

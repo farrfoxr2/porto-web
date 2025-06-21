@@ -4,42 +4,67 @@ import type { Metadata } from "next"
 
 const projects = [
   {
-    title: "create-t3-app",
+    title: "Airon",
     description:
-      "A CLI tool to bootstrap full-stack TypeScript applications with the T3 stack. Simplifies the setup process and includes best practices for modern web development.",
-    role: "Creator and Maintainer",
-    period: "Jun 2022 - Present",
-    technologies: ["TypeScript", "Next.js", "tRPC", "Prisma", "Tailwind CSS", "NextAuth.js"],
+      "A real-time air quality predictor that takes any country as input and shows live AQI predictions using machine learning and data from OpenWeather APIs.",
+    role: "Solo Project",
+    period: "Jan 2024 -  June 2024",
+    technologies: ["React", "TypeScript", "Flask", "Python", "Scikit-learn", "Pandas", "Postman",  "Matplotlib"],
     images: [
-      "/cat-4.webp",
-      "/milk-5.webp",
-      "/skarpsill-3.webp",
+      "/Airon1.webp",
+      "/Airon2.webp",
+      "/Airon3.webp",
     ],
-    href: "https://github.com/t3-oss/create-t3-app",
+    href: "https://farrfoxr.github.io/Airon/",
   },
   {
-    title: "mini-git",
+    title: "Smart Trash Bin",
     description:
-      "A simplified implementation of Git built from scratch to understand version control internals. Implements core Git commands and demonstrates system programming concepts.",
-    role: "Creator",
-    period: "Jul 2024",
-    technologies: ["Rust", "File Systems", "Cryptography", "CLI Design"],
+      "Team project for a Samsung hackathon; created a smart trash bin that classifies and sorts waste using a CNN and IoT (ESP32) components.",
+    role: "Backend engineer",
+    period: "Dec 2024 - May 2025",
+    technologies: ["Flask (Python)", "TensorFlow", "Keras", "Streamlit", "ESP32", "Micropython", "MQTT", "C (Arduino)"],
     images: ["/placeholder.svg?height=192&width=400", "/placeholder.svg?height=192&width=400"],
-    href: "https://github.com/yourusername/mini-git",
+    href: "https://github.com/farrfoxr/ShijinForge-stage4",
   },
   {
-    title: "ai-code-reviewer",
+    title: "Guitar Chorder",
     description:
-      "An intelligent code review assistant that integrates with GitHub to provide automated, context-aware feedback on pull requests using advanced language models.",
-    role: "Lead Developer",
-    period: "Mar 2024 - Aug 2024",
-    technologies: ["Python", "OpenAI API", "GitHub Actions", "Docker", "FastAPI"],
+      "Real-time guitar chord predictor that can recognize major, minor, and 7th chords across 12 root notes using a custom CNN model.",
+    role: "Solo — from recording data to frontend",
+    period: "Jan 2025 - June 2025",
+    technologies: ["TensorFlow", "Python", "Librosa", "Pandas", "Matplotlib", "Next.js", "Tailwind", "JavaScript (JSX)"],
     images: [
-      "/placeholder.svg?height=192&width=400",
-      "/placeholder.svg?height=192&width=400",
-      "/placeholder.svg?height=192&width=400",
+      "/GuitarChorde1.webp",
+      "/GuitarChorde2.webp",
     ],
-    href: "https://github.com/yourusername/ai-code-reviewer",
+    href: "https://github.com/farrfoxr/guitar-chorde",
+  },
+  {
+    title: "ono – Web3 Study Companion",
+    description:
+      "A Web3-powered study app with a private AI assistant and blockchain-based file storage, built during a hackathon.",
+    role: "Secondary Frontend dev, helped out on backend",
+    period: "May 2025 - June 2025",
+    technologies: ["React.js", "Tailwind", "Motoko", "DFX", "ICP (Internet Computer Protocol)"],
+    images: [
+      "/ono2.webp",
+      "/ono1.webp",
+    ],
+    href: "https://github.com/farrfoxr/ono",
+  },
+  {
+    title: "Leaf Notes",
+    description:
+      "A cute, student-friendly chatbot UI that lets you switch between multiple AI models just by adding your own API keys. Chats can be organized into folders, making it perfect for research or studying across different topics and AI tools.",
+    role: "Solo Project",
+    period: "April 2025 - May 2025",
+    technologies: ["Next.js", "Tailwind", "AI APIs"],
+    images: [
+      "/LeafNotes1.webp",
+      "/LeafNotes2.webp",
+    ],
+    href: "https://leafnotes.vercel.app/",
   },
 ]
 

@@ -15,7 +15,7 @@ interface ProjectCardProps {
 export function ProjectCard({ title, description, role, period, technologies, images, href }: ProjectCardProps) {
   return (
     <div className="border border-primary rounded-lg p-6 hover:border-accent-hover transition-colors duration-200 group">
-      <Link href={href} className="block no-underline">
+      <Link target="_blank" href={href} className="block no-underline">
         <div className="flex items-start justify-between mb-4">
           <div>
             <h3 className="text-xl font-bold text-primary group-hover:text-accent transition-colors duration-200 mb-1">

@@ -14,15 +14,15 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.yourdomain.com"),
   title: {
-    default: "Your Name",
-    template: "%s | Your Name",
+    default: "Farrell Suryadi",
+    template: "%s | Farrell Suryadi",
   },
   description: "Your professional description, maker of things.",
   openGraph: {
-    title: "Your Name",
+    title: "Farrell Suryadi",
     description: "Your professional description, maker of things.",
     url: "https://www.yourdomain.com",
-    siteName: "Your Name",
+    siteName: "Farrell Suryadi",
     locale: "en_US",
     type: "website",
   },
