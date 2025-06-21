@@ -12,16 +12,16 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.yourdomain.com"),
+  metadataBase: new URL("https://farrellsuryadi.vercel.app/"),
   title: {
     default: "Farrell Suryadi",
     template: "%s | Farrell Suryadi",
   },
-  description: "Your professional description, maker of things.",
+  description: "Curious Coder, maker of things.",
   openGraph: {
     title: "Farrell Suryadi",
-    description: "Your professional description, maker of things.",
-    url: "https://www.yourdomain.com",
+    description: "Curious Coder, maker of things.",
+    url: "https://farrellsuryadi.vercel.app/",
     siteName: "Farrell Suryadi",
     locale: "en_US",
     type: "website",
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
     "max-snippet": -1,
   },
   twitter: {
-    title: "Your Name",
+    title: "Farrell Suryadi",
     card: "summary_large_image",
-    creator: "@yourtwitterhandle",
+    creator: "@farrbonk",
   },
 }
 
