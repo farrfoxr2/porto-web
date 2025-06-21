@@ -24,7 +24,11 @@ const projects = [
     role: "Backend engineer",
     period: "Dec 2024 - May 2025",
     technologies: ["Flask (Python)", "TensorFlow", "Keras", "Streamlit", "ESP32", "Micropython", "MQTT", "C (Arduino)"],
-    images: ["/placeholder.svg?height=192&width=400", "/placeholder.svg?height=192&width=400"],
+    images: [
+      "/smartbin1.webp",
+      "/smartbin2.webp",
+      "/smartbin3.webp",
+    ],
     href: "https://github.com/farrfoxr/ShijinForge-stage4",
   },
   {
