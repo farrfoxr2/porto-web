@@ -20,8 +20,7 @@ export function Header() {
         </div>
       </div>
       <p className="leading-relaxed animate-fade-in-up text-secondary">
-        Hi! I&apos;m someone who loves to figure out how things work. I explore topics down to the details and edge cases. I use this trait to explore data science and the challenges it brings, but I&apos;m also open 
-        to other fields of topic across tech [softwares, cloud, database, IoT]. I enjoy teaching, sharing what I learn, making complex concepts easy to understand for other people.
+        Hi! I&apos;m someone who loves to figure out how things work, exploring topics down to the details and edge cases. I aim to be a <span className="text-primary font-semibold">Data Scientist</span> with strong <span className="text-primary font-semibold">MLOps</span> strengths: helping businesses use raw data to uncover hidden insights, build practical solutions and AI models tailored to their needs, ship models into web and mobile apps, and advise teams on what data to collect from their apps. I enjoy teaching and sharing what I learn, making complex concepts easy to understand for other people.
       </p>
     </header>
   )

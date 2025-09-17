@@ -2,7 +2,7 @@ import Link from "next/link"
 
 const links = [
   { title: "email", href: "mailto:farrell.suryadi@binus.ac.id" },
-  { title: "linkedin", href: "https://linkedin.com/in/farrell-suryadi" },
+  { title: "linkedin", href: "https://linkedin.com/in/farrellsuryadi" },
   { title: "github", href: "https://github.com/farrfoxr" },
   { title: "x.com", href: "https://x.com/farrbonk" },
 ]
