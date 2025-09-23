@@ -3,33 +3,19 @@ import { ProjectCard } from "@/components/project-card"
 import type { Metadata } from "next"
 
 const projects = [
-  {
-    title: "Airon",
+{
+    title: "Think Fast: Math",
     description:
-      "A real-time air quality predictor that takes any country as input and shows live AQI predictions using machine learning and data from OpenWeather APIs.",
+      "Built and deployed a real-time multiplayer math-quiz web app (Next.js frontend, Node.js + Socket.IO backend) on Render.com; implemented server-authoritative scoring, pre-generated question pipeline to avoid race conditions, and a live scoreboard. Managed Git branching and production deployments.",
     role: "Solo Project",
-    period: "Jan 2024 -  June 2024",
-    technologies: ["React", "TypeScript", "Flask", "Python", "Scikit-learn", "Pandas", "Postman",  "Matplotlib"],
+    period: "Aug 2025 -  Sept 2025",
+    technologies: ["Next.js", "Node.js", "Express", "Socket.IO", "Render.com", "Git", ".env"],
     images: [
-      "/Airon1.webp",
-      "/Airon2.webp",
-      "/Airon3.webp",
+      "/tfm1.webp",
+      "/tfm2.webp",
+      "/tfm3.webp",
     ],
-    href: "https://farrfoxr.github.io/Airon/",
-  },
-  {
-    title: "Smart Trash Bin",
-    description:
-      "Team project for a Samsung hackathon; created a smart trash bin that classifies and sorts waste using a CNN and IoT (ESP32) components.",
-    role: "Backend engineer",
-    period: "Dec 2024 - May 2025",
-    technologies: ["Flask (Python)", "TensorFlow", "Keras", "Streamlit", "ESP32", "Micropython", "MQTT", "C (Arduino)"],
-    images: [
-      "/smartbin1.webp",
-      "/smartbin2.webp",
-      "/smartbin3.webp",
-    ],
-    href: "https://github.com/farrfoxr/ShijinForge-stage4",
+    href: "https://thinkfastmath.vercel.app",
   },
   {
     title: "Guitar Chorder",
@@ -70,6 +56,35 @@ const projects = [
     ],
     href: "https://leafnotes.vercel.app/",
   },
+  {
+    title: "Smart Trash Bin",
+    description:
+      "Team project for a Samsung hackathon; created a smart trash bin that classifies and sorts waste using a CNN and IoT (ESP32) components.",
+    role: "Backend engineer",
+    period: "Dec 2024 - May 2025",
+    technologies: ["Flask (Python)", "TensorFlow", "Keras", "Streamlit", "ESP32", "Micropython", "MQTT", "C (Arduino)"],
+    images: [
+      "/smartbin1.webp",
+      "/smartbin2.webp",
+      "/smartbin3.webp",
+    ],
+    href: "https://github.com/farrfoxr/ShijinForge-stage4",
+  },
+  {
+    title: "Airon",
+    description:
+      "A real-time air quality predictor that takes any country as input and shows live AQI predictions using machine learning and data from OpenWeather APIs.",
+    role: "Solo Project",
+    period: "Jan 2024 -  June 2024",
+    technologies: ["React", "TypeScript", "Flask", "Python", "Scikit-learn", "Pandas", "Postman",  "Matplotlib"],
+    images: [
+      "/Airon1.webp",
+      "/Airon2.webp",
+      "/Airon3.webp",
+    ],
+    href: "https://farrfoxr.github.io/Airon/",
+  },
+
 ]
 
 export default function ProjectsPage() {
