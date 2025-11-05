@@ -25,6 +25,7 @@ const projects = [
 {
     title: "Think Fast: Math",
     description: [
+      "Note: Takes 50 Second to load backend for my game to start (I'm on Free Plan, I'm poor). Try it with friends, it's real & fully working!",
       "Deployed a full-stack, real-time multiplayer math game (Next.js, Node.js) with a live backend on Render.com.",
       "Implemented WebSockets (Socket.IO) for persistent, low-latency client-server communication and a live scoreboard.",
       "Engineered a pre-generated question pipeline to ensure data availability and prevent race conditions.",
