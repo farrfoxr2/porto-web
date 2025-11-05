@@ -28,13 +28,13 @@ const workItems: Item[] = [
 
 const projectItems = [
   {
-    title: "Guitar Chorder",
-    description: "A cool project that does amazing things.",
+    title: "Smart Trash Bin",
+    description: "Reached quarter-finals in the Samsung Innovation Campus (SIC) competition by co-developing a real-time smart trash bin. The system uses an ESP32 and a custom CNN model to autonomously classify and sort waste (organic, plastic, other).",
     href: "https://github.com/farrfoxr/guitar-chorde",
   },
   {
     title: "ono – Web3 Study Companion",
-    description: "A Web3-powered AI study assistant with blockchain-based file storage, built during a hackathon.",
+    description: "2nd Place hackathon Winner Project. A Web3-powered AI study assistant with blockchain-based file storage.",
     href: "https://github.com/farrfoxr/ono",
   },
 ]

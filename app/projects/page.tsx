@@ -47,7 +47,7 @@ const projects = [
       "Integrated an LLM API to power the web app's core chatbot tutor feature.",
       "Implemented Web3 user-specific wallets for decentralized, on-chain storage of notes and documents."
     ],
-    role: "Full-Stack Developer",
+    role: "Full-Stack Developer -  Team Hackathon 2nd Place Winner",
     period: "2023",
     technologies: ["React", "Web3", "LLM API", "Blockchain"],
     images: [
@@ -63,7 +63,7 @@ const projects = [
       "Increased model accuracy by 30% by web-crawling and augmenting a custom image dataset.",
       "Developed a Flask (Python) API to wrap and serve the team's custom CNN model for inference."
     ],
-    role: "ML Engineer",
+    role: "ML Engineer - Samsung SIC Competition",
     period: "2023",
     technologies: ["ESP32", "Python", "Flask", "TensorFlow", "IoT"],
     images: [
