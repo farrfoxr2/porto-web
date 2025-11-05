@@ -33,7 +33,7 @@ const projects = [
       "Managed Git branching strategies and handled production deployments for the backend service."
     ],
     role: "Solo Project",
-    period: "2024",
+    period: "2025",
     technologies: ["Next.js", "Node.js", "Socket.IO", "TypeScript", "Render.com", "Git"],
     images: [
       "/tfm1.webp",
@@ -67,7 +67,7 @@ const projects = [
       "Implemented Web3 user-specific wallets for decentralized, on-chain storage of notes and documents."
     ],
     role: "Full-Stack Developer -  Team Hackathon 2nd Place Winner",
-    period: "2023",
+    period: "2025",
     technologies: ["React", "Web3", "LLM API", "Blockchain"],
     images: [
       "/ono2.webp",
@@ -83,7 +83,7 @@ const projects = [
       "Developed a Flask (Python) API to wrap and serve the team's custom CNN model. Routed live predictions from the API to a Ubidots dashboard, a MongoDB database, and back to the ESP32 for hardware control."
     ],
     role: "ML Engineer - Samsung SIC Competition",
-    period: "2023",
+    period: "2025",
     technologies: ["ESP32", "Python", "Flask", "TensorFlow", "MongoDB", "Streamlit", "Ubidots"],
     images: [
       "/smartbin1.webp",
@@ -99,7 +99,7 @@ const projects = [
       "Developed a full-stack webapp that fetches live pollutant data for any city (via OpenWeather API) and feeds it to the model for real-time AQI prediction."
     ],
     role: "Solo Project",
-    period: "2023",
+    period: "2024",
     technologies: ["Python", "Scikit-learn", "React", "OpenWeather API"],
     images: [
       "/Airon1.webp",
@@ -119,8 +119,7 @@ export default function ProjectsPage() {
       </h1>
 
       <p className="text-secondary mb-12 leading-relaxed">
-        Here are some of the projects I&apos;ve worked on. I enjoy building tools that simplify tasks and exploring new
-        technologies.
+        Here are some of the projects I&apos;ve worked on. I like exploring new skills/concepts I haven&apos;t touched, especially in the field of Data Science and MLOps.
       </p>
 
       <div className="space-y-12">
