@@ -4,7 +4,7 @@ import Image from "next/image"
 
 interface ProjectCardProps {
   title: string
-  description: string
+  description: string[]
   role: string
   period: string
   technologies: string[]
@@ -121,7 +121,14 @@ export function ProjectCard({ title, description, role, period, technologies, im
           )}
         </div>
 
-        <p className="text-secondary mb-4 leading-relaxed">{description}</p>
+        <ul className="space-y-2 mb-4">
+          {description.map((point, index) => (
+            <li key={index} className="flex text-secondary text-sm leading-relaxed">
+              <span className="text-accent mr-2 mt-1 block w-2 h-2 flex-shrink-0">*</span>
+              <span>{point}</span>
+            </li>
+          ))}
+        </ul>
 
         <div>
           <h4 className="text-sm font-semibold text-primary mb-2">technologies</h4>

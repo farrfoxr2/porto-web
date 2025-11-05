@@ -2,90 +2,94 @@ import { ScrambleText } from "@/components/scramble-text"
 import { ProjectCard } from "@/components/project-card"
 import type { Metadata } from "next"
 
+
 const projects = [
 {
     title: "Think Fast: Math",
-    description:
-      "Built and deployed a real-time multiplayer math-quiz web app (Next.js frontend, Node.js + Socket.IO backend) on Render.com; implemented server-authoritative scoring, pre-generated question pipeline to avoid race conditions, and a live scoreboard. Managed Git branching and production deployments.",
+    description: [
+      "Deployed a full-stack, real-time multiplayer math game (Next.js, Node.js) with a live backend on Render.com.",
+      "Implemented WebSockets (Socket.IO) for persistent, low-latency client-server communication and a live scoreboard.",
+      "Engineered a pre-generated question pipeline to ensure data availability and prevent race conditions.",
+      "Designed and implemented server-authoritative scoring to maintain data integrity and prevent client-side manipulation.",
+      "Managed Git branching strategies and handled production deployments for the backend service."
+    ],
     role: "Solo Project",
-    period: "Aug 2025 -  Sept 2025",
-    technologies: ["Next.js", "Node.js", "Express", "Socket.IO", "Render.com", "Git", ".env"],
+    period: "2024",
+    technologies: ["Next.js", "Node.js", "Socket.IO", "TypeScript", "Render.com", "Git"],
     images: [
       "/tfm1.webp",
       "/tfm2.webp",
       "/tfm3.webp",
     ],
-    href: "https://thinkfastmath.vercel.app",
+    href: "https://thinkfastmath.vercel.app"
   },
   {
     title: "Guitar Chorder",
-    description:
-      "Real-time guitar chord predictor that can recognize major, minor, and 7th chords across 12 root notes using a custom CNN model.",
-    role: "Solo — from recording data to frontend",
-    period: "Jan 2025 - June 2025",
-    technologies: ["TensorFlow", "Python", "Librosa", "Pandas", "Matplotlib", "Next.js", "Tailwind", "JavaScript (JSX)"],
+    description: [
+      "Recorded my own dataset of over 1,000 audio samples (maj, min, maj7, min7 chords) over 2 months.",
+      "Engineered features by converting WAV data into Mel Spectrograms, Chroma, and CQT to train a CNN.",
+      "Achieved 70% accuracy on the custom dataset and 40% on complex real-world benchmarks (e.g., GuitarSet, IDMT-SMT).",
+      "Built a full-stack web app for real-time chord prediction from microphone input (approx. 2-second latency)."
+    ],
+    role: "Solo Project",
+    period: "2024",
+    technologies: ["Python", "TensorFlow", "Next.js", "Audio Processing"],
     images: [
       "/GuitarChorde1.webp",
       "/GuitarChorde2.webp",
     ],
-    href: "https://github.com/farrfoxr/guitar-chorde",
+    href: "https://github.com/farrfoxr/guitar-chorde"
   },
   {
     title: "ono – Web3 Study Companion",
-    description:
-      "A Web3-powered study app with a private AI assistant and blockchain-based file storage, built during a hackathon.",
-    role: "Secondary Frontend dev, helped out on backend",
-    period: "May 2025 - June 2025",
-    technologies: ["React.js", "Tailwind", "Motoko", "DFX", "ICP (Internet Computer Protocol)"],
+    description: [
+      "Won 2nd place and a 6 Million IDR prize in the Codefest.id team hackathon.",
+      "Integrated an LLM API to power the web app's core chatbot tutor feature.",
+      "Implemented Web3 user-specific wallets for decentralized, on-chain storage of notes and documents."
+    ],
+    role: "Full-Stack Developer",
+    period: "2023",
+    technologies: ["React", "Web3", "LLM API", "Blockchain"],
     images: [
       "/ono2.webp",
       "/ono1.webp",
     ],
-    href: "https://github.com/farrfoxr/ono",
-  },
-  {
-    title: "Leaf Notes",
-    description:
-      "A cute, student-friendly chatbot UI that lets you switch between multiple AI models just by adding your own API keys. Chats can be organized into folders, making it perfect for research or studying across different topics and AI tools.",
-    role: "Solo Project",
-    period: "April 2025 - May 2025",
-    technologies: ["Next.js", "Tailwind", "AI APIs"],
-    images: [
-      "/LeafNotes1.webp",
-      "/LeafNotes2.webp",
-    ],
-    href: "https://leafnotes.vercel.app/",
+    href: "https://github.com/farrfoxr/ono"
   },
   {
     title: "Smart Trash Bin",
-    description:
-      "Team project for a Samsung hackathon; created a smart trash bin that classifies and sorts waste using a CNN and IoT (ESP32) components.",
-    role: "Backend engineer",
-    period: "Dec 2024 - May 2025",
-    technologies: ["Flask (Python)", "TensorFlow", "Keras", "Streamlit", "ESP32", "Micropython", "MQTT", "C (Arduino)"],
+    description: [
+      "Designed the end-to-end IoT flow for my team: ESP32 captures images, sends to a REST API, and receives servo commands based on model-processed data.",
+      "Increased model accuracy by 30% by web-crawling and augmenting a custom image dataset.",
+      "Developed a Flask (Python) API to wrap and serve the team's custom CNN model for inference."
+    ],
+    role: "ML Engineer",
+    period: "2023",
+    technologies: ["ESP32", "Python", "Flask", "TensorFlow", "IoT"],
     images: [
       "/smartbin1.webp",
       "/smartbin2.webp",
       "/smartbin3.webp",
     ],
-    href: "https://github.com/farrfoxr/ShijinForge-stage4",
+    href: "https://github.com/farrfoxr/ShijinForge-stage4"
   },
   {
     title: "Airon",
-    description:
-      "A real-time air quality predictor that takes any country as input and shows live AQI predictions using machine learning and data from OpenWeather APIs.",
+    description: [
+      "Trained a Random Forest regression model on pollutant data (PM2.5, PM10, O3) to predict AQI scores, achieving 90% accuracy on test data.",
+      "Developed a full-stack webapp that fetches live pollutant data for any city (via OpenWeather API) and feeds it to the model for real-time AQI prediction."
+    ],
     role: "Solo Project",
-    period: "Jan 2024 -  June 2024",
-    technologies: ["React", "TypeScript", "Flask", "Python", "Scikit-learn", "Pandas", "Postman",  "Matplotlib"],
+    period: "2023",
+    technologies: ["Python", "Scikit-learn", "React", "OpenWeather API"],
     images: [
       "/Airon1.webp",
       "/Airon2.webp",
       "/Airon3.webp",
     ],
-    href: "https://farrfoxr.github.io/Airon/",
-  },
-
-]
+    href: "https://farrfoxr.github.io/Airon/"
+  }
+];
 
 export default function ProjectsPage() {
   return (
