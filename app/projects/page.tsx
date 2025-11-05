@@ -5,6 +5,24 @@ import type { Metadata } from "next"
 
 const projects = [
 {
+    title: "Pokémon EDA & Imbalanced Classification",
+    description: [
+      "Conducted in-depth EDA on a Kaggle dataset to uncover insights, such as the correlation between a Pokémon's physical attributes and its combat statistics.",
+      "Engineered a classifier to detect legendary Pokémon, solving a classic imbalanced data problem (rare class) that is methodologically similar to financial fraud detection.",
+      "Systematically benchmarked 6 models, comparing Random Forest, XGBoost, and hyperparameter-tuned variants against SMOTE-balanced data to optimize for minority class detection.",
+      "Built a reusable evaluation pipeline to benchmark models using F1, ROC AUC, and PR AUC. Validated the final model against an unseen 'real-world' test set (newer Pokémon generations) to prove generalization."
+    ],
+    role: "Solo Project",
+    period: "2025",
+    technologies: ["Python", "Pandas", "Scikit-learn", "XGBoost", "SMOTE", "Matplotlib", "Seaborn"],
+    images: [
+      "/pokemonMain.webp",
+      "/pokemon1.webp",
+      "/pokemon2.webp"
+    ],
+    href: "https://colab.research.google.com/drive/1hfFfRypTHUcxeAUsPJYKwq4Bc3c1iKTC?usp=sharing" 
+  },
+{
     title: "Think Fast: Math",
     description: [
       "Deployed a full-stack, real-time multiplayer math game (Next.js, Node.js) with a live backend on Render.com.",
