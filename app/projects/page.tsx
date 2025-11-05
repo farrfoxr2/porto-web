@@ -84,7 +84,7 @@ const projects = [
     ],
     role: "ML Engineer - Samsung SIC Competition",
     period: "2023",
-    technologies: ["ESP32", "Python", "Flask", "TensorFlow", "IoT"],
+    technologies: ["ESP32", "Python", "Flask", "TensorFlow", "MongoDB", "Streamlit", "Ubidots"],
     images: [
       "/smartbin1.webp",
       "/smartbin2.webp",
