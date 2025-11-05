@@ -78,9 +78,9 @@ const projects = [
   {
     title: "Smart Trash Bin",
     description: [
-      "Designed the end-to-end IoT flow for my team: ESP32 captures images, sends to a REST API, and receives servo commands based on model-processed data.",
+      "Designed the end-to-end ML + IoT flow for my team: ESP32 captures images, sends to a REST API, and receives servo commands based on model-processed data.",
       "Increased model accuracy by 30% by web-crawling and augmenting a custom image dataset.",
-      "Developed a Flask (Python) API to wrap and serve the team's custom CNN model for inference."
+      "Developed a Flask (Python) API to wrap and serve the team's custom CNN model. Routed live predictions from the API to a Ubidots dashboard, a MongoDB database, and back to the ESP32 for hardware control."
     ],
     role: "ML Engineer - Samsung SIC Competition",
     period: "2023",
