@@ -1,4 +1,5 @@
 import { Header } from "@/components/header"
+import { CvSection } from "@/components/cv-section"
 import { type Item, SectionList } from "@/components/section-list"
 import { LinksSection } from "@/components/links-section"
 
@@ -17,7 +18,7 @@ const workItems: Item[] = [
     description: "Reached quarter-finals in this AI & IoT-focused hackathon, building smart solutions as part of Samsung’s global innovation and upskilling program.",
     href: "https://drive.google.com/file/d/1ZMpptaSgbvzWYrCdmgjAKGKOKJO0GMC_/view",
   },
-    {
+  {
     title: "BNEC Alam Sutera (BINUS English Club)",
     role: "TOELF Tutor",
     period: "May 2024 - Feb 2025",
@@ -43,6 +44,7 @@ export default function HomePage() {
   return (
     <>
       <Header />
+      <CvSection />
       <SectionList title="experience" items={workItems} />
       <SectionList title="projects" items={projectItems} viewAllHref="/projects" viewAllText="all projects" />
       <LinksSection />
