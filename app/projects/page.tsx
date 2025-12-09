@@ -16,9 +16,9 @@ const projects = [
     period: "2025",
     technologies: ["Python", "Pandas", "Scikit-learn", "XGBoost", "SMOTE", "Matplotlib", "Seaborn"],
     images: [
-      "/pokemonMain.webp",
-      "/pokemon1.webp",
-      "/pokemon2.webp"
+      "/images/pokemonMain.webp",
+      "/images/pokemon1.webp",
+      "/images/pokemon2.webp"
     ],
     href: "https://colab.research.google.com/drive/1hfFfRypTHUcxeAUsPJYKwq4Bc3c1iKTC?usp=sharing" 
   },
@@ -36,9 +36,9 @@ const projects = [
     period: "2025",
     technologies: ["Next.js", "Node.js", "Socket.IO", "TypeScript", "Render.com", "Git"],
     images: [
-      "/tfm1.webp",
-      "/tfm2.webp",
-      "/tfm3.webp",
+      "/images/tfm1.webp",
+      "/images/tfm2.webp",
+      "/images/tfm3.webp",
     ],
     href: "https://thinkfastmath.vercel.app"
   },
@@ -54,8 +54,8 @@ const projects = [
     period: "2024",
     technologies: ["Python", "TensorFlow", "Next.js", "Audio Processing"],
     images: [
-      "/GuitarChorde1.webp",
-      "/GuitarChorde2.webp",
+      "/images/GuitarChorde1.webp",
+      "/images/GuitarChorde2.webp",
     ],
     href: "https://github.com/farrfoxr/guitar-chorde"
   },
@@ -70,8 +70,8 @@ const projects = [
     period: "2025",
     technologies: ["React", "Web3", "LLM API", "Blockchain"],
     images: [
-      "/ono2.webp",
-      "/ono1.webp",
+      "/images/ono2.webp",
+      "/images/ono1.webp",
     ],
     href: "https://github.com/farrfoxr/ono"
   },
@@ -86,9 +86,9 @@ const projects = [
     period: "2025",
     technologies: ["ESP32", "Python", "Flask", "TensorFlow", "MongoDB", "Streamlit", "Ubidots"],
     images: [
-      "/smartbin1.webp",
-      "/smartbin2.webp",
-      "/smartbin3.webp",
+      "/images/smartbin1.webp",
+      "/images/smartbin2.webp",
+      "/images/smartbin3.webp",
     ],
     href: "https://github.com/farrfoxr/ShijinForge-stage4"
   },
@@ -102,9 +102,9 @@ const projects = [
     period: "2024",
     technologies: ["Python", "Scikit-learn", "React", "OpenWeather API"],
     images: [
-      "/Airon1.webp",
-      "/Airon2.webp",
-      "/Airon3.webp",
+      "/images/Airon1.webp",
+      "/images/Airon2.webp",
+      "/images/Airon3.webp",
     ],
     href: "https://farrfoxr.github.io/Airon/"
   }
