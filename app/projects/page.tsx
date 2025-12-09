@@ -4,7 +4,24 @@ import type { Metadata } from "next"
 
 
 const projects = [
-{
+  {
+  title: "Real-Time Local Image Captioning System (GPU-Accelerated)",
+  description: [
+    "Built a real-time image captioning system running fully on a local RTX-3070, streaming live camera input and updating captions every 3 seconds via a Next.js frontend and FastAPI backend.",
+    "Selected Hugging Face’s MoonDream (SigLIP + Phi) for fast on-device captioning after researching Ollama, Qwen, and LLaVA-style VL models, achieving consistent sub-2-second inference.",
+    "Enabled GPU-accelerated inference under WSL by configuring CUDA-compatible NVIDIA drivers and environment tooling to bypass Windows GPU limitations.",
+    "Optimized data transfer with binary multipart uploads (no base64/JSON), returning captions and inference time for real-time performance feedback."
+  ],
+  role: "AI Engineer / Full-Stack Developer",
+  period: "2025",
+  technologies: ["Hugging Face Transformers","MoonDream","FastAPI","Next.js","PyTorch","NVIDIA CUDA","WSL2"],
+  images: [
+    "/images/moondream1.webp",
+    "/images/moondream1.webp",
+  ],
+  href: "https://github.com/farrfoxr/realtime-captioning"
+  },
+  {
     title: "Pokémon EDA & Imbalanced Classification",
     description: [
       "Conducted in-depth EDA on a Kaggle dataset to uncover insights, such as the correlation between a Pokémon's physical attributes and its combat statistics.",
@@ -22,7 +39,7 @@ const projects = [
     ],
     href: "https://colab.research.google.com/drive/1hfFfRypTHUcxeAUsPJYKwq4Bc3c1iKTC?usp=sharing" 
   },
-{
+  {
     title: "Think Fast: Math",
     description: [
       "Note: Takes 50 Second to load backend for my game to start (I'm on Free Plan, I'm poor). Try it with friends, it's real & fully working!",
