@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowUpRight } from "lucide-react"
+import { ArrowUpRight, PlayCircle } from "lucide-react"
 import Image from "next/image"
 
 interface ProjectCardProps {
@@ -8,14 +8,26 @@ interface ProjectCardProps {
   role: string
   period: string
   technologies: string[]
-  images: string[]
-  href: string
+  images?: string[]
+  // Main click target. Leave it out for private work with no public link: the card then does not click.
+  href?: string
+  // Optional demo video, shown as its own link so it does not nest inside the card link.
+  demo?: string
 }
 
-export function ProjectCard({ title, description, role, period, technologies, images, href }: ProjectCardProps) {
+function CardLink({ href, children }: { href?: string; children: React.ReactNode }) {
+  if (!href) return <div>{children}</div>
+  return (
+    <Link target="_blank" href={href} className="block no-underline">
+      {children}
+    </Link>
+  )
+}
+
+export function ProjectCard({ title, description, role, period, technologies, images = [], href, demo }: ProjectCardProps) {
   return (
     <div className="border border-primary rounded-lg p-6 hover:border-accent-hover transition-colors duration-200 group">
-      <Link target="_blank" href={href} className="block no-underline">
+      <CardLink href={href}>
         <div className="flex items-start justify-between mb-4">
           <div>
             <h3 className="text-xl font-bold text-primary group-hover:text-accent transition-colors duration-200 mb-1">
@@ -25,10 +37,11 @@ export function ProjectCard({ title, description, role, period, technologies, im
               {role} ({period})
             </div>
           </div>
-          <ArrowUpRight className="w-5 h-5 text-secondary group-hover:text-accent transition-all duration-200 group-hover:translate-x-1 group-hover:-translate-y-1 flex-shrink-0" />
+          {href && <ArrowUpRight className="w-5 h-5 text-secondary group-hover:text-accent transition-all duration-200 group-hover:translate-x-1 group-hover:-translate-y-1 flex-shrink-0" />}
         </div>
 
         {/* Image Gallery */}
+        {images.length > 0 && (
         <div className="mb-4 h-48 relative overflow-hidden rounded-lg bg-secondary">
           {/* Main Image - Always Visible */}
           <div className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-0">
@@ -120,6 +133,7 @@ export function ProjectCard({ title, description, role, period, technologies, im
             </div>
           )}
         </div>
+        )}
 
         <ul className="space-y-2 mb-4">
           {description.map((point, index) => (
@@ -140,7 +154,18 @@ export function ProjectCard({ title, description, role, period, technologies, im
             ))}
           </div>
         </div>
-      </Link>
+      </CardLink>
+
+      {demo && (
+        <Link
+          target="_blank"
+          href={demo}
+          className="mt-4 inline-flex items-center gap-2 text-sm text-secondary hover:text-accent transition-colors duration-200 no-underline"
+        >
+          <PlayCircle className="w-4 h-4" />
+          watch demo
+        </Link>
+      )}
     </div>
   )
 }

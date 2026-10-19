@@ -6,7 +6,8 @@ export interface Item {
   role?: string
   period?: string
   description: string
-  href: string
+  // Leave it out when there is no public link: the item then does not click.
+  href?: string
 }
 
 interface SectionListProps {
@@ -14,6 +15,15 @@ interface SectionListProps {
   items: Item[]
   viewAllHref?: string
   viewAllText?: string
+}
+
+function ItemLink({ href, children }: { href?: string; children: React.ReactNode }) {
+  if (!href) return <div>{children}</div>
+  return (
+    <Link target="_blank" href={href} className="block no-underline">
+      {children}
+    </Link>
+  )
 }
 
 export function SectionList({ title, items, viewAllHref, viewAllText }: SectionListProps) {
@@ -27,13 +37,13 @@ export function SectionList({ title, items, viewAllHref, viewAllText }: SectionL
       <div className="space-y-6">
         {items.map((item, index) => (
           <div key={index} className="group">
-            <Link target="_blank" href={item.href} className="block no-underline">
+            <ItemLink href={item.href}>
               <div className="flex flex-col space-y-1">
                 <div className="flex items-center justify-between">
                   <h3 className="font-semibold text-primary group-hover:text-accent transition-colors duration-200">
                     {item.title}
                   </h3>
-                  <ArrowUpRight className="w-4 h-4 text-secondary group-hover:text-accent transition-all duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  {item.href && <ArrowUpRight className="w-4 h-4 text-secondary group-hover:text-accent transition-all duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />}
                 </div>
                 {item.role && item.period && (
                   <div className="text-sm text-secondary">
@@ -42,7 +52,7 @@ export function SectionList({ title, items, viewAllHref, viewAllText }: SectionL
                 )}
                 <p className="text-secondary text-sm leading-relaxed">{item.description}</p>
               </div>
-            </Link>
+            </ItemLink>
           </div>
         ))}
       </div>

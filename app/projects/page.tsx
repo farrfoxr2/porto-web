@@ -5,59 +5,92 @@ import type { Metadata } from "next"
 
 const projects = [
   {
-  title: "Real-Time Local Image Captioning System (GPU-Accelerated)",
+    title: "Soluix – AI Bug-Reporting System: From WhatsApp Chats to Developer Tickets",
+    description: [
+      "Led the project from a one-line brief: interviewed 5 support and tech staff, found the root cause was communication, and split one overloaded WhatsApp group into a structured WhatsApp Community before adding AI.",
+      "Built an AI agent that turns raw WhatsApp complaints into complete MantisBT bug tickets and guides support through bug reproduction with the tech team's knowledge base, with human approval and personal-data masking.",
+      "Shipped the MVP in under 2 weeks; now used by 4-8 staff on a live client project.",
+      "Designed and deployed a 7-container Docker Compose stack on a VPS: web console, WhatsApp, personal-data masking, knowledge base and LLM gateway services on an internal network, reached only through SSH tunnels."
+    ],
+    role: "AI Engineer Intern @ Soluix",
+    period: "2026",
+    technologies: ["TypeScript", "Next.js", "Python", "FastAPI", "Model Context Protocol (MCP)", "Vercel AI SDK", "MantisBT API", "Docker"],
+    images: ["/images/bug-system.webp"],
+    href: "https://youtu.be/FJQQsH9ioxU"
+  },
+  {
+    title: "Soluix – AI Meeting Minutes Generator for Long Zoom Meetings",
+    description: [
+      "Started it without a formal assignment after the Head of HR raised a pain point; shipped in 3 days, now used by 9+ staff, cutting minutes preparation from 100 to 5 minutes per meeting.",
+      "Built a pipeline that turns 1-3 hour recordings into structured minutes: in-browser audio compression (ffmpeg.wasm), speech-to-text (OpenAI gpt-4o-transcribe) and Claude Sonnet with schema-validated output, exported to PDF and Word.",
+      "Added a transcript review step for misheard names from HR feedback; deployed on the company AWS EKS cluster with Docker and GitHub Actions."
+    ],
+    role: "AI Engineer Intern @ Soluix",
+    period: "2026",
+    technologies: ["TypeScript", "Vercel AI SDK", "Claude API", "FFmpeg", "PostgreSQL", "Zod", "GitHub Actions", "Kubernetes", "AWS EKS"],
+    images: ["/images/mom-generator.webp"],
+    href: "https://youtu.be/iYVVHa_LlZ4"
+  },
+  {
+    title: "Tokodrink – WhatsApp Business Virtual Assistant AI Agent",
+    description: [
+      "Built a production-ready WhatsApp Business assistant for Tokodrink, a retail drink store with 4 branches, with n8n running the full flow: incoming message, AI agent, tools, and reply through the official Meta WhatsApp Cloud API.",
+      "Designed a price lookup sub-agent that searches the store's 413-product pricelist, so the main agent quotes real prices and keeps its context small.",
+      "Deployed on a Linux VPS with Docker and Caddy (HTTPS), with guardrails for alcohol sales: 21+ age rule, off-topic refusal, no orders or payments in chat, and orders sent to each branch's WhatsApp."
+    ],
+    role: "AI Engineer (client project)",
+    period: "2026",
+    technologies: ["n8n", "OpenRouter", "Meta WhatsApp Cloud API", "Docker", "Caddy", "Ubuntu VPS"],
+    images: [
+      "/images/tokodrink-chat.webp",
+      "/images/tokodrink-n8n.webp",
+    ]
+  },
+  {
+    title: "Divi – Branching AI Chat (trydivi.app)",
+    description: [
+      "Built and launched Divi, a branching AI chat app for non-linear thinking: users branch off any message into a side discussion, each branch keeps the history up to the fork, and the main thread stays untouched. Live at trydivi.app, free during beta.",
+      "Chose local-first storage: all topics and messages stay in the browser (IndexedDB via Dexie), and the server is only a stateless AI proxy. Trade-off: fast, private and cheap to run, but chats stay on one device. The one exception is the daily cost budget in Upstash Redis, so users cannot reset it by clearing their browser.",
+      "Gave the AI a web search tool (Tavily) with a per-request limit, and rendered answers as Markdown, LaTeX math (KaTeX) and Mermaid diagrams; the diagram engine loads only when a diagram appears.",
+      "Built a live graph of every branch with sigma.js (WebGL); click a node to jump into that branch, or search all messages to highlight the matches."
+    ],
+    role: "Solo Project (live product)",
+    period: "2025 - present",
+    technologies: ["Next.js", "TypeScript", "Vercel AI SDK", "Dexie (IndexedDB)", "Clerk", "Upstash Redis", "Tavily", "KaTeX", "Mermaid", "sigma.js"],
+    images: [
+      "/images/divi-landing.webp",
+      "/images/divi-branch.webp",
+      "/images/divi-graph.webp",
+    ],
+    href: "https://trydivi.app"
+  },
+  {
+    title: "Self-Hosted AI Agent on WhatsApp, Built From Scratch",
+    description: [
+      "Built a self-hosted personal AI assistant on WhatsApp, similar to OpenClaw and Hermes Agent but with no agent framework: own tool-calling loop on LiteLLM, so the LLM provider can change at runtime.",
+      "Engineered the context window: per-chat memory as a markdown wiki, retrieval-augmented generation (RAG) with keyword search instead of a vector database, and auto-compaction that cut cost per turn from about $0.11 to $0.016.",
+      "Designed a modular codebase of 41 tools across a main agent and 4 sub-agents; read-only tool calls run in parallel, and 887 tests run offline."
+    ],
+    role: "Solo Project",
+    period: "2026",
+    technologies: ["Python", "FastAPI", "LiteLLM", "OpenRouter", "WAHA (WhatsApp HTTP API)", "SQLite FTS5", "Tavily", "Docker Compose", "pytest"]
+  },
+  {
+  title: "Fully Local VLM Webcam Captioning: Real-Time, No Internet",
   description: [
-    "Built a real-time image captioning system running fully on a local RTX-3070, streaming live camera input and updating captions every 3 seconds via a Next.js frontend and FastAPI backend.",
-    "Selected Hugging Face’s MoonDream (SigLIP + Phi) for fast on-device captioning after researching Ollama, Qwen, and LLaVA-style VL models, achieving consistent sub-2-second inference.",
-    "Enabled GPU-accelerated inference under WSL by configuring CUDA-compatible NVIDIA drivers and environment tooling to bypass Windows GPU limitations.",
-    "Optimized data transfer with binary multipart uploads (no base64/JSON), returning captions and inference time for real-time performance feedback."
+    "Built a real-time webcam captioning web app with a fully local model, with no internet and no cloud API: the model runs on my own RTX 3070 GPU, and Next.js sends a frame every 3 seconds as a binary upload (no base64) to a local FastAPI backend.",
+    "Selected Moondream2, a small vision-language model (VLM) run with Hugging Face Transformers, after considering Ollama, Qwen-VL and LLaVA options that were too large or slow for 8 GB of GPU memory; loaded it once in bfloat16 to stay in GPU memory, with captions in under 2 seconds.",
+    "Enabled CUDA GPU inference under WSL2 on Windows by matching NVIDIA driver, CUDA and PyTorch versions, after CPU-only inference was too slow for real-time use."
   ],
   role: "AI Engineer / Full-Stack Developer",
   period: "2025",
   technologies: ["Hugging Face Transformers","MoonDream","FastAPI","Next.js","PyTorch","NVIDIA CUDA","WSL2"],
   images: [
-    "/images/moondream1.webp",
+    "/images/captioning-demo.webp",
     "/images/moondream1.webp",
   ],
-  href: "https://github.com/farrfoxr/realtime-captioning"
-  },
-  {
-    title: "Pokémon EDA & Imbalanced Classification",
-    description: [
-      "Conducted in-depth EDA on a Kaggle dataset to uncover insights, such as the correlation between a Pokémon's physical attributes and its combat statistics.",
-      "Engineered a classifier to detect legendary Pokémon, solving a classic imbalanced data problem (rare class) that is methodologically similar to financial fraud detection.",
-      "Systematically benchmarked 6 models, comparing Random Forest, XGBoost, and hyperparameter-tuned variants against SMOTE-balanced data to optimize for minority class detection.",
-      "Built a reusable evaluation pipeline to benchmark models using F1, ROC AUC, and PR AUC. Validated the final model against an unseen 'real-world' test set (newer Pokémon generations) to prove generalization."
-    ],
-    role: "Solo Project",
-    period: "2025",
-    technologies: ["Python", "Pandas", "Scikit-learn", "XGBoost", "SMOTE", "Matplotlib", "Seaborn"],
-    images: [
-      "/images/pokemonMain.webp",
-      "/images/pokemon1.webp",
-      "/images/pokemon2.webp"
-    ],
-    href: "https://colab.research.google.com/drive/1hfFfRypTHUcxeAUsPJYKwq4Bc3c1iKTC?usp=sharing" 
-  },
-  {
-    title: "Think Fast: Math",
-    description: [
-      "Note: Takes 50 Second to load backend for my game to start (I'm on Free Plan, I'm poor). Try it with friends, it's real & fully working!",
-      "Deployed a full-stack, real-time multiplayer math game (Next.js, Node.js) with a live backend on Render.com.",
-      "Implemented WebSockets (Socket.IO) for persistent, low-latency client-server communication and a live scoreboard.",
-      "Engineered a pre-generated question pipeline to ensure data availability and prevent race conditions.",
-      "Designed and implemented server-authoritative scoring to maintain data integrity and prevent client-side manipulation.",
-      "Managed Git branching strategies and handled production deployments for the backend service."
-    ],
-    role: "Solo Project",
-    period: "2025",
-    technologies: ["Next.js", "Node.js", "Socket.IO", "TypeScript", "Render.com", "Git"],
-    images: [
-      "/images/tfm1.webp",
-      "/images/tfm2.webp",
-      "/images/tfm3.webp",
-    ],
-    href: "https://thinkfastmath.vercel.app"
+  href: "https://github.com/farrfoxr/realtime-captioning",
+  demo: "https://youtu.be/2xYc9B5lcT0"
   },
   {
     title: "Guitar Chorder",
@@ -109,22 +142,6 @@ const projects = [
     ],
     href: "https://github.com/farrfoxr/ShijinForge-stage4"
   },
-  {
-    title: "Airon",
-    description: [
-      "Trained a Random Forest regression model on pollutant data (PM2.5, PM10, O3) to predict AQI scores, achieving 90% accuracy on test data.",
-      "Developed a full-stack webapp that fetches live pollutant data for any city (via OpenWeather API) and feeds it to the model for real-time AQI prediction."
-    ],
-    role: "Solo Project",
-    period: "2024",
-    technologies: ["Python", "Scikit-learn", "React", "OpenWeather API"],
-    images: [
-      "/images/Airon1.webp",
-      "/images/Airon2.webp",
-      "/images/Airon3.webp",
-    ],
-    href: "https://farrfoxr.github.io/Airon/"
-  }
 ];
 
 export default function ProjectsPage() {
@@ -136,7 +153,7 @@ export default function ProjectsPage() {
       </h1>
 
       <p className="text-secondary mb-12 leading-relaxed">
-        Here are some of the projects I&apos;ve worked on. I like exploring new skills/concepts I haven&apos;t touched, especially in the field of Data Science and MLOps.
+        Projects I have built, newest first. Work projects come first. Click a card to open its demo video, live site or code. Cards for private code do not click.
       </p>
 
       <div className="space-y-12">

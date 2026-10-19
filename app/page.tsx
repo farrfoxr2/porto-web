@@ -5,6 +5,12 @@ import { LinksSection } from "@/components/links-section"
 
 const workItems: Item[] = [
   {
+    title: "PT Soluix Finteknologi Indonesia",
+    role: "AI Engineer Intern",
+    period: "2025 - present",
+    description: "Built an AI bug-reporting system and an AI meeting minutes generator, both used by staff today. Received a bonus for the meeting minutes generator, which Soluix valued at about IDR 70 million in saved staff work hours. Led 1 of 6 groups in an AI-Driven Development Life Cycle (AI-DLC) workshop with Kiro, an AI coding tool, for about 65 staff.",
+  },
+  {
     title: "2nd Place Winner – Codefest.id Hackathon 14",
     role: "ONO",
     period: "May 2025 - June 2025",
@@ -20,23 +26,23 @@ const workItems: Item[] = [
   },
   {
     title: "BNEC Alam Sutera (BINUS English Club)",
-    role: "TOELF Tutor",
+    role: "TOEFL Tutor",
     period: "May 2024 - Feb 2025",
-    description: "Taught TOEFL preparation professionally, focusing on core TOELF materials such as academic English skills and clear communication.",
+    description: "Taught TOEFL preparation professionally, focusing on core TOEFL materials such as academic English skills and clear communication.",
     href: "https://recruitment.mybnec.org/",
   },
 ]
 
 const projectItems = [
   {
-    title: "Smart Trash Bin",
-    description: "Reached quarter-finals in the Samsung Innovation Campus (SIC) competition by co-developing a real-time smart trash bin. The system uses an ESP32 and a custom CNN model to autonomously classify and sort waste (organic, plastic, other).",
-    href: "https://github.com/farrfoxr/guitar-chorde",
+    title: "Soluix – AI Bug-Reporting System",
+    description: "An AI agent that turns WhatsApp complaints into complete MantisBT bug tickets, with human approval. Led from a one-line brief; shipped the MVP in under 2 weeks for a live client project.",
+    href: "https://youtu.be/FJQQsH9ioxU",
   },
   {
-    title: "ono – Web3 Study Companion",
-    description: "2nd Place hackathon Winner Project. A Web3-powered AI study assistant with blockchain-based file storage.",
-    href: "https://github.com/farrfoxr/ono",
+    title: "Divi – Branching AI Chat",
+    description: "A live AI chat app for non-linear thinking: branch off any message into a side discussion, then return to the main thread where you left it.",
+    href: "https://trydivi.app",
   },
 ]
 
