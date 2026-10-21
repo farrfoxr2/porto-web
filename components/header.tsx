@@ -33,7 +33,7 @@ export function Header() {
       <div className="relative w-40 aspect-[3/4] sm:aspect-auto sm:w-48 lg:w-56 flex-shrink-0 overflow-hidden rounded-lg border border-secondary animate-fade-in">
         <Image
           src="/images_me/headshot-portrait.webp"
-          alt="Farrell Suryadi"
+          alt="Farrell Laurensius Suryadi"
           fill
           priority
           unoptimized

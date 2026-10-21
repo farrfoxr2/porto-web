@@ -17,10 +17,10 @@ export const metadata: Metadata = {
     default: "Farrell Suryadi",
     template: "%s | Farrell Suryadi",
   },
-  description: "AI Engineer. I build AI solutions end to end, from the pain point to production.",
+  description: "Farrell Laurensius Suryadi, AI Engineer. I build AI solutions end to end, from the pain point to production.",
   openGraph: {
     title: "Farrell Suryadi",
-    description: "AI Engineer. I build AI solutions end to end, from the pain point to production.",
+    description: "Farrell Laurensius Suryadi, AI Engineer. I build AI solutions end to end, from the pain point to production.",
     url: "https://farrellsuryadi.vercel.app/",
     siteName: "Farrell Suryadi",
     locale: "en_US",
